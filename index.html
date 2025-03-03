@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Your Website Title</title>
-       <!-- Other meta tags, stylesheets, etc. -->
+<html ⚡ lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AMP Website Title</title>
+    <!-- Load the AMP library -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Load the AMP Ad extension -->
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <!-- Other meta tags, stylesheets, etc. -->
+</head>
+<body>
+    <h1>Welcome to My AMP Website</h1>
+    <p>This is an example of an AMP page with Google AdSense ads.</p>
 
-       <!-- Google AdSense Code -->
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
-           crossorigin="anonymous"></script>
-   </head>
-   <body>
-       <!-- Your website content -->
-   </body>
-   </html>
+    <!-- Google AdSense AMP Ad Unit -->
+    <amp-ad width="100vw" height="320"
+         type="adsense"
+         data-ad-client="ca-pub-4626020508608349"
+         data-ad-slot="4121323815"
+         data-auto-format="rspv"
+         data-full-width="">
+      <div overflow=""></div>
+    </amp-ad>
+
+    <!-- More content -->
+    <p>Enjoy your stay on our website!</p>
+</body>
+</html>
