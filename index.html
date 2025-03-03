@@ -3,55 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Watch Website</title>
-    <!-- Google AdSense Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
-        crossorigin="anonymous"></script>
+    <title>Watch Ads & Earn</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        .ad-box { margin: 20px 0; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Ad Watch Website</h1>
-        <p>This is a simple website to display Google AdSense ads.</p>
-    </header>
-
-    <main>
-        <section>
-            <h2>Content Section 1</h2>
-            <p>This is some example content for the first section of the website.</p>
-            <!-- Ad Unit 1 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
-                crossorigin="anonymous"></script>
+    <h2>Watch Ads & Earn Rewards</h2>
+    <p>Watch ads and earn points.</p>
+    
+    <div class="container">
+        <div class="ad-box">
+            <!-- Ad Unit -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349" crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4626020508608349"
-                data-ad-slot="4121323815"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
+                 style="display:block"
+                 data-ad-client="ca-pub-4626020508608349"
+                 data-ad-slot="4121323815"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
             <script>
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-        </section>
+        </div>
 
-        <section>
-            <h2>Content Section 2</h2>
-            <p>This is some example content for the second section of the website.</p>
-            <!-- Ad Unit 2 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
-                crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-4626020508608349"
-                data-ad-slot="4121323815"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </section>
-    </main>
+        <button id="watchAd" onclick="trackWatch()">I've Watched the Ad</button>
+        <p id="rewardMessage"></p>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Ad Watch Website. All rights reserved.</p>
-    </footer>
+    <script>
+        function trackWatch() {
+            setTimeout(() => {
+                document.getElementById('rewardMessage').innerText = "✅ You've earned 10 points!";
+            }, 5000); // Simulate 5 sec ad-watching time
+        }
+    </script>
 </body>
 </html>
