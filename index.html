@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html ⚡ lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your AMP Website Title</title>
-    <!-- Load the AMP library -->
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <!-- Load the AMP Ad extension -->
-    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-    <!-- Other meta tags, stylesheets, etc. -->
+    <title>Ad Watch Website</title>
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
+        crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Welcome to My AMP Website</h1>
-    <p>This is an example of an AMP page with Google AdSense ads.</p>
+    <header>
+        <h1>Welcome to My Ad Watch Website</h1>
+        <p>This is a simple website to display Google AdSense ads.</p>
+    </header>
 
-    <!-- Google AdSense AMP Ad Unit -->
-    <amp-ad width="100vw" height="320"
-         type="adsense"
-         data-ad-client="ca-pub-4626020508608349"
-         data-ad-slot="4121323815"
-         data-auto-format="rspv"
-         data-full-width="">
-      <div overflow=""></div>
-    </amp-ad>
+    <main>
+        <section>
+            <h2>Content Section 1</h2>
+            <p>This is some example content for the first section of the website.</p>
+            <!-- Ad Unit 1 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4626020508608349"
+                data-ad-slot="4121323815"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
 
-    <!-- More content -->
-    <p>Enjoy your stay on our website!</p>
+        <section>
+            <h2>Content Section 2</h2>
+            <p>This is some example content for the second section of the website.</p>
+            <!-- Ad Unit 2 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-4626020508608349"
+                data-ad-slot="4121323815"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ad Watch Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
