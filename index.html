@@ -3,42 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Ads & Earn</title>
+    <title>Ad Watch and Earn</title>
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349"
+     crossorigin="anonymous"></script>
+
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-        .container { max-width: 600px; margin: auto; }
-        .ad-box { margin: 20px 0; }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .ad-box {
+            margin: 20px 0;
+        }
+        .watch-button {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .watch-button:disabled {
+            background-color: #ccc;
+        }
     </style>
 </head>
 <body>
-    <h2>Watch Ads & Earn Rewards</h2>
-    <p>Watch ads and earn points.</p>
-    
+
     <div class="container">
+        <h1>Watch Ads & Earn Rewards</h1>
+        <p>Watch ads to earn points!</p>
+
         <div class="ad-box">
-            <!-- Ad Unit -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4626020508608349" crossorigin="anonymous"></script>
+            <!-- Google AdSense Ad Placement -->
             <ins class="adsbygoogle"
                  style="display:block"
                  data-ad-client="ca-pub-4626020508608349"
-                 data-ad-slot="4121323815"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"></ins>
             <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
 
-        <button id="watchAd" onclick="trackWatch()">I've Watched the Ad</button>
-        <p id="rewardMessage"></p>
+        <button class="watch-button" id="watchAd">Watch Ad</button>
+        <p id="points">Points: 0</p>
     </div>
 
     <script>
-        function trackWatch() {
+        let points = 0;
+        const button = document.getElementById('watchAd');
+        const pointsDisplay = document.getElementById('points');
+
+        button.addEventListener('click', () => {
+            button.disabled = true;
             setTimeout(() => {
-                document.getElementById('rewardMessage').innerText = "✅ You've earned 10 points!";
-            }, 5000); // Simulate 5 sec ad-watching time
-        }
+                points += 10;
+                pointsDisplay.textContent = `Points: ${points}`;
+                button.disabled = false;
+            }, 30000); // 30 seconds to simulate ad watching
+        });
     </script>
+
 </body>
 </html>
